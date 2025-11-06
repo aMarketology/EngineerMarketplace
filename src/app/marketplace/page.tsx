@@ -266,15 +266,15 @@ export default function MarketplacePage() {
         {/* Facebook Marketplace Style 9x9 Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-9 gap-3">
           {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.05, duration: 0.3 }}
-              className="group bg-slate-900/50 backdrop-blur-md border border-slate-800 hover:border-slate-700 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10"
-              whileHover={{ y: -3, scale: 1.02 }}
-              style={{ aspectRatio: '5/4' }}
-            >
+            <Link key={service.id} href={`/marketplace/service/${service.id}`}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.05, duration: 0.3 }}
+                className="group bg-slate-900/50 backdrop-blur-md border border-slate-800 hover:border-slate-700 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 cursor-pointer h-full"
+                whileHover={{ y: -3, scale: 1.02 }}
+                style={{ aspectRatio: '5/4' }}
+              >
               <div className="h-full flex flex-col">
                 {/* Image Section - Takes 60% of card height */}
                 <div className="relative h-3/5 overflow-hidden">
@@ -355,7 +355,8 @@ export default function MarketplacePage() {
                 </div>
               </div>
 
-            </motion.div>
+              </motion.div>
+            </Link>
           ))}
         </div>
 

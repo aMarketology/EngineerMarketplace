@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <div className="bg-white text-gray-900 overflow-hidden">
       
-      {/* HERO SECTION - Premium Design with Strong Background */}
+d      {/* HERO SECTION - Premium Design with Strong Background */}
       <section className="relative min-h-screen flex items-center overflow-hidden" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
         
         {/* Animated Background Orbs */}
